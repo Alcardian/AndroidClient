@@ -9,38 +9,77 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/LineGraph"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:editable="true"
+        android:hint="Stock Name"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/find_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editText1"
+        android:layout_toRightOf="@+id/editText1"
+        android:onClick="FindButtonhandler"
+        android:text="Find" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_below="@+id/editText1"
+        android:onClick="Timehandler"
+        android:text="Time Period" />
+
     <Button
         android:id="@+id/LineGraph"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/PieGraph"
+        android:layout_below="@+id/button2"
         android:onClick="LineGraphhandler"
-        android:text="Line Graph" />
+        android:text="Stock Price Chart - Line" />
 
     <Button
         android:id="@+id/PieGraph"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/ChandleGraph"
         android:layout_alignLeft="@+id/ChandleGraph"
-        android:layout_marginBottom="50dp"
+        android:layout_below="@+id/LineGraph"
         android:onClick="PieGraphhandler"
-        android:text="Pie Graph" />
+        android:text="Volume Chart - Pie" />
+
     <Button
         android:id="@+id/ChandleGraph"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_alignLeft="@+id/Candlestick"
+        android:layout_below="@+id/PieGraph"
         android:onClick="ChandleGraphhandler"
-        android:text="Candle Graph" />
+        android:text="Price Range - VR Chart" />
+
+    <Button
+        android:id="@+id/Candlestick"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ChandleGraph"
+        android:layout_centerHorizontal="true"
+        android:onClick="CandlestickHandler"
+        android:text="Candlestick" />
+
     <Button
         android:id="@+id/NewsButton"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
+        android:layout_alignLeft="@+id/Candlestick"
+        android:layout_below="@+id/Candlestick"
         android:onClick="Newshandler"
         android:text="News" />
 

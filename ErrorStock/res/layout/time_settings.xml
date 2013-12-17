@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/time_fromText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="from: yyyy:mm:dd" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/time_toText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/time_fromText"
+        android:layout_below="@+id/time_fromText"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="to: yyyy:mm:dd" />
+
+    <TextView
+        android:id="@+id/time_status_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/time_updateButton"
+        android:layout_below="@+id/time_updateButton"
+        android:text="Status: No settings applied." />
+
+    <Button
+        android:id="@+id/time_updateButton"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/time_toText"
+        android:layout_below="@+id/time_toText"
+        android:onClick="updateButtonHandler"
+        android:text="Update" />
+
+</RelativeLayout>
